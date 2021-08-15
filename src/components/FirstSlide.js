@@ -11,12 +11,12 @@ const ticker = keyframes`
 
 const Wrapper = styled.div`
   background-color: #4a6873;
-  height: calc(100vh - 32px);
+  height: calc(100vh - 23px);
   display: flex;
   ${"" /* justify-content: center; */}
   ${"" /* align-items: center; */}
   cursor: crosshair;
-  margin-bottom: 296px;
+  ${"" /* margin-bottom: 296px; */}
   position: relative;
 `;
 
@@ -32,7 +32,7 @@ const TitleWrapper = styled(motion.h1)`
 
 const BannerTitle = styled(motion.span)`
   display: block;
-  color: #df5d6c;
+  color: #df5d6c;Û
   text-decoration: none;
   ${"" /* font-size: 150px; */}
 `;
@@ -192,7 +192,7 @@ const FirstSlide = () => {
           <BannerTitle variants={item}>Studio</BannerTitle>
         </TitleWrapper>
       </Wrapper>
-      <StickyBar>
+      {/* <StickyBar>
         <div>
           <span class='ticker__text'>
             Made in Amsterdam. With a french touch.
@@ -219,7 +219,7 @@ const FirstSlide = () => {
             Made in Amsterdam. With a french touch.
           </span>
         </div>
-      </StickyBar>
+      </StickyBar> */}
       {/* <StickyBarTwo>
         <div>
           <span class='ticker__text'>
@@ -247,35 +247,8 @@ const FirstSlide = () => {
             ROSE ATLANTIC season is open. Don’t miss out.
           </span>
         </div>
-      </StickyBarTwo>
-      <StickyBarThree>
-        <div>
-          <span class='ticker__text'>
-            ROSE ATLANTIC season is open. Don’t miss out.
-          </span>
-          <span class='ticker__text' aria-hidden='true'>
-            ROSE ATLANTIC season is open. Don’t miss out.
-          </span>
-          <span class='ticker__text' aria-hidden='true'>
-            ROSE ATLANTIC season is open. Don’t miss out.
-          </span>
-          <span class='ticker__text' aria-hidden='true'>
-            ROSE ATLANTIC season is open. Don’t miss out.
-          </span>
-          <span class='ticker__text' aria-hidden='true'>
-            ROSE ATLANTIC season is open. Don’t miss out.
-          </span>
-          <span class='ticker__text' aria-hidden='true'>
-            ROSE ATLANTIC season is open. Don’t miss out.
-          </span>
-          <span class='ticker__text' aria-hidden='true'>
-            ROSE ATLANTIC season is open. Don’t miss out.
-          </span>
-          <span class='ticker__text' aria-hidden='true'>
-            ROSE ATLANTIC season is open. Don’t miss out.
-          </span>
-        </div>
-      </StickyBarThree> */}
+      </StickyBarTwo> */}
+
       {/* <StickyBarFour>
         <div>
           <span class='ticker__text'>
