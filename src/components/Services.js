@@ -164,6 +164,19 @@ const Services = () => {
     rootMargin: "-200px",
   });
 
+  let desktopVariants = {};
+  const isMobile = window.innerWidth < 768;
+  if (!isMobile) {
+    desktopVariants = {
+      visible: {
+        opacity: 1,
+        y: 0,
+        transition: { duration: 0.7, ease: [0.6, 0.05, -0.01, 0.9] },
+      },
+      hidden: { opacity: 0, y: 90 },
+    };
+  }
+
   useEffect(() => {
     if (inView) {
       animation.start("visible");
@@ -177,14 +190,7 @@ const Services = () => {
           ref={contentRef}
           animate={animation}
           initial='hidden'
-          variants={{
-            visible: {
-              opacity: 1,
-              y: 0,
-              transition: { duration: 0.7, ease: [0.6, 0.05, -0.01, 0.9] },
-            },
-            hidden: { opacity: 0, y: 90 },
-          }}
+          variants={desktopVariants}
         >
           <Text>
             Websites Design, Development & Digital Strategy, helping brands and

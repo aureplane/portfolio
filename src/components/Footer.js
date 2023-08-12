@@ -18,7 +18,7 @@ const Wrapper = styled.div`
   }
 `;
 
-const Title = styled(motion.h3)`
+const Title = styled.h2`
   font-family: arial;
   font-size: 40px;
   text-transform: uppercase;
@@ -72,6 +72,19 @@ const Footer = () => {
     rootMargin: "-200px",
   });
 
+  let desktopVariants = {};
+  const isMobile = window.innerWidth < 768;
+  if (!isMobile) {
+    desktopVariants = {
+      visible: {
+        opacity: 1,
+        y: 0,
+        transition: { duration: 0.5, ease: [0.4, 0.03, -0.01, 0.8] },
+      },
+      hidden: { opacity: 0, y: -200 },
+    };
+  }
+
   useEffect(() => {
     if (inView) {
       animation.start("visible");
@@ -85,14 +98,7 @@ const Footer = () => {
         ref={footerRef}
         animate={animation}
         initial='hidden'
-        variants={{
-          visible: {
-            opacity: 1,
-            y: 0,
-            transition: { duration: 0.5, ease: [0.4, 0.03, -0.01, 0.8] },
-          },
-          hidden: { opacity: 0, y: -200 },
-        }}
+        variants={desktopVariants}
       >
         <div>
           <a href='mailto:aur.plane@gmail.com?subject=👋'>
