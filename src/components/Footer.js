@@ -43,7 +43,6 @@ const ContactGrid = styled(motion.div)`
   a {
     text-decoration: none;
     color: white;
-    ${"" /* color: #f22ebe; */}
     position: relative;
   }
   @media (min-width: 1024px) {
