@@ -49,7 +49,7 @@ const StickyBar = styled.div`
 `;
 const Subtitle = styled.div`
   background-color: black;
-  height: 450px;
+  height: 480px;
   position: relative;
   @media (min-width: 1024px) {
     height: 600px;
@@ -140,6 +140,13 @@ const Intro = styled.div`
   }
   svg {
     transform: translateY(4px);
+  }
+  .email {
+    color: #ff59c773;
+    background: none;
+    a:hover {
+      background: linear-gradient(rgba(0, 0, 0, 0) 10%, #ff59c7 70%);
+    }
   }
   @media (min-width: 1024px) {
     width: 45%;
@@ -254,8 +261,10 @@ const Services = () => {
             </a>
             .
             <br />
-            Open to freelance projects. Feel free to{" "}
-            <a href='mailto:aur.plane@gmail.com?subject=👋'>contact me!</a>
+            Open to freelance projects. Feel free to contact me at{" "}
+            <a href='mailto:aur.plane@gmail.com?subject=👋' class='email'>
+              aur.plane@gmail.com
+            </a>
           </p>
         </Intro>
         <Skills>
