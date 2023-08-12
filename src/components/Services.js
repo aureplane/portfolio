@@ -49,8 +49,11 @@ const StickyBar = styled.div`
 `;
 const Subtitle = styled.div`
   background-color: black;
-  height: 600px;
+  height: 450px;
   position: relative;
+  @media (min-width: 1024px) {
+    height: 600px;
+  }
 `;
 
 const ContainerText = styled(motion.div)`
@@ -71,7 +74,7 @@ const Text = styled(motion.p)`
   margin-top: 60px;
   svg {
     position: absolute;
-    margin: 15px 0 0 25px;
+    margin: 35px 0 0 25px;
     width: 100px;
     fill: white;
     transform: scaleX(-1);
@@ -80,6 +83,10 @@ const Text = styled(motion.p)`
   @media (min-width: 1024px) {
     font-size: 50px;
     margin-right: 15%;
+    margin-top: 90px;
+    svg {
+      margin: 15px 0 0 25px;
+    }
   }
 `;
 
@@ -236,8 +243,8 @@ const Services = () => {
         <Intro>
           <h2>Hi!</h2>
           <p>
-            I'm Aurélie, Frontend developer based in Amsterdam. I have worked in
-            the past at{" "}
+            I'm Aurélie, Front-end developer based in Amsterdam. I have worked
+            in the past at{" "}
             <a href='https://bravoure.nl/en/' target='_blank'>
               Bravoure
             </a>
@@ -246,6 +253,9 @@ const Services = () => {
               De Bijenkorf
             </a>
             .
+            <br />
+            Open to freelance projects. Feel free to{" "}
+            <a href='mailto:aur.plane@gmail.com?subject=👋'>contact me!</a>
           </p>
         </Intro>
         <Skills>
@@ -339,73 +349,119 @@ const Services = () => {
       </MainText>
 
       <StickyBar>
-        <div>
-          <span class='ticker__text'>FRENCH</span>
-          <span class='ticker__text' aria-hidden='true'>
-            ☺
-          </span>
-          <span class='ticker__text' aria-hidden='true'>
-            FRONTEND
-          </span>
-          <span class='ticker__text' aria-hidden='true'>
-            ☆
-          </span>
-          <span class='ticker__text' aria-hidden='true'>
-            WEB
-          </span>
-          <span class='ticker__text' aria-hidden='true'>
-            ☀
-          </span>
-          <span class='ticker__text' aria-hidden='true'>
-            DEVELOPER
-          </span>
-          <span class='ticker__text' aria-hidden='true'>
-            ☺
-          </span>
-          <span class='ticker__text' aria-hidden='true'>
-            AMSTERDAM
-          </span>
-          <span class='ticker__text' aria-hidden='true'>
-            ⛱
-          </span>
-          <span class='ticker__text' aria-hidden='true'>
-            AURÉLIE PLANE
-          </span>
-          <span class='ticker__text' aria-hidden='true'>
-            ☀
-          </span>
-          <span class='ticker__text'>FRENCH</span>
-          <span class='ticker__text' aria-hidden='true'>
-            ☺
-          </span>
-          <span class='ticker__text' aria-hidden='true'>
-            FRONTEND
-          </span>
-          <span class='ticker__text' aria-hidden='true'>
-            ☆
-          </span>
-          <span class='ticker__text' aria-hidden='true'>
-            WEB
-          </span>
-          <span class='ticker__text' aria-hidden='true'>
-            ☀
-          </span>
-          <span class='ticker__text' aria-hidden='true'>
-            DEVELOPER
-          </span>
-          <span class='ticker__text' aria-hidden='true'>
-            ☺
-          </span>
-          <span class='ticker__text' aria-hidden='true'>
-            AMSTERDAM
-          </span>
-          <span class='ticker__text' aria-hidden='true'>
-            ⛱
-          </span>
-          <span class='ticker__text' aria-hidden='true'>
-            AURÉLIE PLANE
-          </span>
-        </div>
+        {isMobile ? (
+          <div>
+            <span class='ticker__text'>FRENCH</span>
+            <span class='ticker__text' aria-hidden='true'>
+              ☆
+            </span>
+            <span class='ticker__text' aria-hidden='true'>
+              FRONT-END
+            </span>
+            <span class='ticker__text' aria-hidden='true'>
+              ☆
+            </span>
+            <span class='ticker__text' aria-hidden='true'>
+              DEVELOPER
+            </span>
+            <span class='ticker__text' aria-hidden='true'>
+              ☆
+            </span>
+            <span class='ticker__text' aria-hidden='true'>
+              AMSTERDAM
+            </span>
+            <span class='ticker__text' aria-hidden='true'>
+              ☆
+            </span>
+            <span class='ticker__text' aria-hidden='true'>
+              AURÉLIE PLANE
+            </span>
+            <span class='ticker__text' aria-hidden='true'>
+              ☆
+            </span>
+            <span class='ticker__text'>FRENCH</span>
+            <span class='ticker__text' aria-hidden='true'>
+              ☆
+            </span>
+            <span class='ticker__text' aria-hidden='true'>
+              FRONT-END
+            </span>
+            <span class='ticker__text' aria-hidden='true'>
+              ☆
+            </span>
+            <span class='ticker__text' aria-hidden='true'>
+              DEVELOPER
+            </span>
+            <span class='ticker__text' aria-hidden='true'>
+              ☆
+            </span>
+            <span class='ticker__text' aria-hidden='true'>
+              AMSTERDAM
+            </span>
+            <span class='ticker__text' aria-hidden='true'>
+              ☆
+            </span>
+            <span class='ticker__text' aria-hidden='true'>
+              AURÉLIE PLANE
+            </span>
+          </div>
+        ) : (
+          <div>
+            <span class='ticker__text'>FRENCH</span>
+            <span class='ticker__text' aria-hidden='true'>
+              ☺
+            </span>
+            <span class='ticker__text' aria-hidden='true'>
+              FRONT-END
+            </span>
+            <span class='ticker__text' aria-hidden='true'>
+              ☆
+            </span>
+            <span class='ticker__text' aria-hidden='true'>
+              DEVELOPER
+            </span>
+            <span class='ticker__text' aria-hidden='true'>
+              ☺
+            </span>
+            <span class='ticker__text' aria-hidden='true'>
+              AMSTERDAM
+            </span>
+            <span class='ticker__text' aria-hidden='true'>
+              ⛱
+            </span>
+            <span class='ticker__text' aria-hidden='true'>
+              AURÉLIE PLANE
+            </span>
+            <span class='ticker__text' aria-hidden='true'>
+              ☀
+            </span>
+            <span class='ticker__text'>FRENCH</span>
+            <span class='ticker__text' aria-hidden='true'>
+              ☺
+            </span>
+            <span class='ticker__text' aria-hidden='true'>
+              FRONT-END
+            </span>
+            <span class='ticker__text' aria-hidden='true'>
+              ☆
+            </span>
+            <span class='ticker__text' aria-hidden='true'>
+              DEVELOPER
+            </span>
+            <span class='ticker__text' aria-hidden='true'>
+              ☺
+            </span>
+            <span class='ticker__text' aria-hidden='true'>
+              AMSTERDAM
+            </span>
+            <span class='ticker__text' aria-hidden='true'>
+              ⛱
+            </span>
+            <span class='ticker__text' aria-hidden='true'>
+              AURÉLIE PLANE
+            </span>
+          </div>
+        )}
       </StickyBar>
     </Wrapper>
   );

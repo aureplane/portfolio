@@ -62,11 +62,11 @@ const Header = () => {
     <>
       <Wrapper>
         <ImageWrapper>
-          <img src={mainImage} alt='Aurélie Plane, Frontend Developer' />
+          <img src={mainImage} alt='Aurélie Plane, Front-end Developer' />
         </ImageWrapper>
         <TextRight>
           <h1>Aurélie Plane</h1>
-          <p>Frontend Developer</p>
+          <p>Front-end Developer</p>
           <p>Based in Amsterdam, NL</p>
         </TextRight>
       </Wrapper>
